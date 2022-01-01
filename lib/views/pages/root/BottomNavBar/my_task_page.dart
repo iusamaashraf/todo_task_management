@@ -53,8 +53,6 @@ class MyTaskPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   con.selectedIndex.value = index;
-                  print(controller.selectedIndex.value);
-                  print(index);
                 },
                 child: Text(
                   name,
