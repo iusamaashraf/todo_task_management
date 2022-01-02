@@ -4,9 +4,11 @@ import 'package:todo_task_management/constants/size_config.dart';
 class NewTaskTextField extends StatelessWidget {
   const NewTaskTextField({
     required this.hintText,
+    required this.controller,
     Key? key,
   }) : super(key: key);
   final String hintText;
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,6 +21,7 @@ class NewTaskTextField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: TextFormField(
+          controller: controller,
           decoration: InputDecoration(
             border: InputBorder.none,
             hintText: hintText,

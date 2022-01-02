@@ -3,12 +3,16 @@ import 'package:get/get.dart';
 import 'package:todo_task_management/constants/size_config.dart';
 import 'package:todo_task_management/utils/colors.dart';
 import 'package:todo_task_management/views/pages/common_pages/password_change/password_changed_page.dart';
-import 'package:todo_task_management/views/pages/common_pages/sign_in/sign_in_page.dart';
+import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class ResetPasswordPage extends StatelessWidget {
-  const ResetPasswordPage({Key? key}) : super(key: key);
+  ResetPasswordPage({Key? key}) : super(key: key);
+  final TextEditingController resetController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
+  final TextEditingController newPasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,15 +46,18 @@ class ResetPasswordPage extends StatelessWidget {
                       ),
                 ),
               ),
-              const CustomField(
+              CustomField(
+                  controller: resetController,
                   hintText: '****',
                   title: 'Reset code',
                   textinputType: TextInputType.emailAddress),
-              const CustomField(
+              CustomField(
+                  controller: newPasswordController,
                   hintText: 'Enter your password here',
                   title: 'Password',
                   textinputType: TextInputType.emailAddress),
-              const CustomField(
+              CustomField(
+                  controller: confirmPasswordController,
                   hintText: 'Re-Enter your password here',
                   title: 'Confirm Password',
                   textinputType: TextInputType.emailAddress),

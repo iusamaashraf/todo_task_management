@@ -4,11 +4,14 @@ import 'package:todo_task_management/constants/size_config.dart';
 import 'package:todo_task_management/utils/colors.dart';
 import 'package:todo_task_management/views/pages/common_pages/recover_mail/recover_mail_page.dart';
 import 'package:todo_task_management/views/pages/root/root_page.dart';
+import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  SignInPage({Key? key}) : super(key: key);
 
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,12 +43,14 @@ class SignInPage extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
             ),
-            const CustomField(
+            CustomField(
+              controller: usernameController,
               textinputType: TextInputType.name,
               hintText: 'JohnDoe',
               title: 'User Name',
             ),
-            const CustomField(
+            CustomField(
+              controller: passwordController,
               textinputType: TextInputType.name,
               hintText: 'Enter your password here',
               title: 'Password',
@@ -55,7 +60,7 @@ class SignInPage extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    Get.to(() => const RecoverMailPage());
+                    Get.to(() => RecoverMailPage());
                   },
                   child: Text('Fotgot Password?',
                       style: Theme.of(context)
@@ -81,50 +86,6 @@ class SignInPage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CustomField extends StatelessWidget {
-  const CustomField({
-    required this.hintText,
-    required this.title,
-    required this.textinputType,
-    Key? key,
-  }) : super(key: key);
-
-  final String title, hintText;
-  final TextInputType textinputType;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: 3 * SizeConfig.heightMultiplier),
-        Text(
-          title,
-          style: Theme.of(context)
-              .textTheme
-              .headline6!
-              .copyWith(color: Colors.black, fontWeight: FontWeight.w400),
-        ),
-        TextFormField(
-          style: Theme.of(context)
-              .textTheme
-              .subtitle1!
-              .copyWith(color: Colors.black),
-          keyboardType: textinputType,
-          decoration: InputDecoration(
-            enabledBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey),
-            ),
-            focusedBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
-            hintText: hintText,
-          ),
-        )
-      ],
     );
   }
 }

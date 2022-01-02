@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:todo_task_management/constants/size_config.dart';
 import 'package:todo_task_management/utils/colors.dart';
 import 'package:todo_task_management/views/pages/common_pages/forgot_password/reset_password_page.dart';
-import 'package:todo_task_management/views/pages/common_pages/sign_in/sign_in_page.dart';
+import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class RecoverMailPage extends StatelessWidget {
-  const RecoverMailPage({Key? key}) : super(key: key);
-
+  RecoverMailPage({Key? key}) : super(key: key);
+  final TextEditingController mailIDController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,17 +42,19 @@ class RecoverMailPage extends StatelessWidget {
                       ),
                 ),
               ),
-              const CustomField(
-                  hintText: 'john@example.com',
-                  title: 'Mail ID',
-                  textinputType: TextInputType.emailAddress),
+              CustomField(
+                hintText: 'john@example.com',
+                title: 'Mail ID',
+                textinputType: TextInputType.emailAddress,
+                controller: mailIDController,
+              ),
               SizedBox(height: 5 * SizeConfig.heightMultiplier),
               Center(
                 child: PrimaryButton(
                   isExpanded: true,
                   bgColor: primaryColor,
                   onTap: () {
-                    Get.to(() => const ResetPasswordPage());
+                    Get.to(() => ResetPasswordPage());
                   },
                   text: 'Send Request',
                   textColor: Colors.white,

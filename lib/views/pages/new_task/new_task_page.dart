@@ -8,8 +8,9 @@ import 'package:todo_task_management/views/widgets/primary_button.dart';
 import 'components/description_widget.dart';
 
 class NewTaskPage extends StatelessWidget {
-  const NewTaskPage({Key? key}) : super(key: key);
-
+  NewTaskPage({Key? key}) : super(key: key);
+  final TextEditingController titleController = TextEditingController();
+  final TextEditingController dueDate = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +61,8 @@ class NewTaskPage extends StatelessWidget {
                   children: [
                     const NewTaskHeader(),
                     const SizedBox(height: 10),
-                    const NewTaskTextField(
+                    NewTaskTextField(
+                      controller: titleController,
                       hintText: 'Title',
                     ),
                     Padding(
@@ -79,7 +81,10 @@ class NewTaskPage extends StatelessWidget {
                             const SizedBox(height: 10),
                             const DescriptionWidget(),
                             const SizedBox(height: 10),
-                            const NewTaskTextField(hintText: 'Due Date'),
+                            NewTaskTextField(
+                              hintText: 'Due Date',
+                              controller: dueDate,
+                            ),
                             const SizedBox(height: 10),
                             Text(
                               'Add member',

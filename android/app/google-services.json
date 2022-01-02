@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "5187909542",
+    "project_id": "todotaskmanagement-5fcff",
+    "storage_bucket": "todotaskmanagement-5fcff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5187909542:android:bc728f42509224f3a18167",
+        "android_client_info": {
+          "package_name": "com.example.todo_task_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5187909542-afbg45etrr73e15m02rs8i14bnbnoudq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqRylJVbClxQLP0yoCIK2bEm1pWLD86pY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5187909542-afbg45etrr73e15m02rs8i14bnbnoudq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

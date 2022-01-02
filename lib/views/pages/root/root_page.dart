@@ -110,7 +110,7 @@ class RootPage extends StatelessWidget {
                                       children: [
                                         TextButtonWidget(
                                           onTap: () {
-                                            Get.to(() => const NewTaskPage());
+                                            Get.to(() => NewTaskPage());
                                           },
                                           title: 'Add Task',
                                         ),

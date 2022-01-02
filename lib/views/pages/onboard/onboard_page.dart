@@ -92,7 +92,7 @@ class OnboardPage extends StatelessWidget {
               child: PrimaryButton(
                 bgColor: Colors.white,
                 onTap: () {
-                  Get.to(() => const SignInPage());
+                  Get.to(() => SignInPage());
                 },
                 text: 'Get Started',
                 textColor: Colors.black87,
@@ -103,7 +103,7 @@ class OnboardPage extends StatelessWidget {
               bottom: 7 * SizeConfig.heightMultiplier,
               child: TextButton(
                 onPressed: () {
-                  Get.to(() => const SignInPage());
+                  Get.to(() => SignInPage());
                 },
                 child: Text('Login',
                     style: Theme.of(context)

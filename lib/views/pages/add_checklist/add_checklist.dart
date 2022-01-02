@@ -11,7 +11,7 @@ class AddChecklist extends StatelessWidget {
   AddChecklist({Key? key}) : super(key: key);
 
   final checkBoxController = OnboardController();
-
+  final TextEditingController titleController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +73,8 @@ class AddChecklist extends StatelessWidget {
                                   .subtitle1!
                                   .copyWith(color: Colors.black),
                             ),
-                            const NewTaskTextField(
+                            NewTaskTextField(
+                                controller: titleController,
                                 hintText: 'Enter the title here'),
                             const SizedBox(height: 10),
                             CheckBoxWidget(
