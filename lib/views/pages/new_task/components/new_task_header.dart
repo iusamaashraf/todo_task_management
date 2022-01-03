@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class NewTaskHeader extends StatelessWidget {
   const NewTaskHeader({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -13,7 +13,7 @@ class NewTaskHeader extends StatelessWidget {
         Text('For',
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
+                .subtitle1
                 .copyWith(color: Colors.black, fontWeight: FontWeight.w600)),
         Container(
           //height: 3 * SizeConfig.heightMultiplier,
@@ -23,13 +23,13 @@ class NewTaskHeader extends StatelessWidget {
           child: Text('Assignee',
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .subtitle1
                   .copyWith(color: Colors.black, fontWeight: FontWeight.w600)),
         ),
         Text('In',
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
+                .subtitle1
                 .copyWith(color: Colors.black, fontWeight: FontWeight.w600)),
         Container(
           //height: 3 * SizeConfig.heightMultiplier,
@@ -39,7 +39,7 @@ class NewTaskHeader extends StatelessWidget {
           child: Text('Project',
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .subtitle1
                   .copyWith(color: Colors.black, fontWeight: FontWeight.w600)),
         ),
       ],

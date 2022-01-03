@@ -4,10 +4,10 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class RecentTaskTile extends StatelessWidget {
   const RecentTaskTile({
-    Key? key,
-    required this.color,
-    required this.time,
-    required this.title,
+    Key key,
+    this.color,
+    this.time,
+    this.title,
   }) : super(key: key);
   final Color color;
   final String title, time;
@@ -80,21 +80,14 @@ class RecentTaskTile extends StatelessWidget {
                       children: [
                         Text(
                           title,
-                          style: Theme.of(context)
-                              .textTheme
-                              .subtitle1!
-                              .copyWith(
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w400),
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.w400),
                         ),
                         Text(
                           time,
-                          style: Theme.of(context)
-                              .textTheme
-                              .subtitle2!
-                              .copyWith(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.w400),
+                          style: Theme.of(context).textTheme.subtitle2.copyWith(
+                              color: Colors.grey, fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),

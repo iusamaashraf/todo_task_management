@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_task_management/constants/size_config.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({Key key}) : super(key: key);
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
@@ -12,7 +12,7 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   final List<String> _unit = ['Kilograms', 'Gram', 'Litres', 'Milli litres'];
-  String? _selectedLocation;
+  String _selectedLocation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +30,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     Text('Unit',
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1!
+                            .subtitle1
                             .copyWith(color: Colors.black)),
                     Container(
                       padding: const EdgeInsets.all(12),
@@ -51,7 +51,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           value: _selectedLocation,
                           onChanged: (newValue) {
                             setState(() {
-                              _selectedLocation = newValue as String?;
+                              _selectedLocation = newValue as String;
                             });
                           },
                           items: _unit.map((unit) {

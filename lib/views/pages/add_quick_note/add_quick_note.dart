@@ -6,7 +6,7 @@ import 'package:todo_task_management/views/widgets/choose_color.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class AddQuickNote extends StatelessWidget {
-  const AddQuickNote({Key? key}) : super(key: key);
+  const AddQuickNote({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AddQuickNote extends StatelessWidget {
           'New Note',
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headline5
               .copyWith(color: Colors.white),
         ),
         centerTitle: true,
@@ -66,7 +66,7 @@ class AddQuickNote extends StatelessWidget {
                               'Description',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             const SizedBox(height: 10),
@@ -76,7 +76,7 @@ class AddQuickNote extends StatelessWidget {
                               'Color',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             const SizedBox(height: 5),

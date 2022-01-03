@@ -24,7 +24,7 @@ class RootPage extends StatelessWidget {
     const ProfilePage(),
   ];
 
-  RootPage({Key? key}) : super(key: key);
+  RootPage({Key key}) : super(key: key);
   final controller = OnboardController();
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class RootPage extends StatelessWidget {
                   'Work List',
                   style: Theme.of(context)
                       .textTheme
-                      .headline5!
+                      .headline5
                       .copyWith(color: Colors.white),
                 ),
                 centerTitle: true,
@@ -161,7 +161,7 @@ class RootPage extends StatelessWidget {
                 const SizedBox(height: 5),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                  style: Theme.of(context).textTheme.subtitle2.copyWith(
                         color:
                             index == controller.bottomNavselectedPageIndex.value
                                 ? primaryColor

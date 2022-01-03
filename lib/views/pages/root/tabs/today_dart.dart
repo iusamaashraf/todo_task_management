@@ -4,7 +4,7 @@ import 'package:todo_task_management/utils/colors.dart';
 import 'package:todo_task_management/views/widgets/recent_task_tile.dart';
 
 class TodayTab extends StatelessWidget {
-  const TodayTab({Key? key}) : super(key: key);
+  const TodayTab({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class TodayTab extends StatelessWidget {
                       'Today ${monthNames[today.month - 1]}, ${today.day}/${today.year}',
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle2!
+                          .subtitle2
                           .copyWith(color: Colors.grey)),
                   const SizedBox(height: 10),
                   const RecentTaskTile(

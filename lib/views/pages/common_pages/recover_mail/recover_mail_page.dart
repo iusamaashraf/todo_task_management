@@ -7,7 +7,7 @@ import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class RecoverMailPage extends StatelessWidget {
-  RecoverMailPage({Key? key}) : super(key: key);
+  RecoverMailPage({Key key}) : super(key: key);
   final TextEditingController mailIDController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class RecoverMailPage extends StatelessWidget {
               SizedBox(height: 3 * SizeConfig.heightMultiplier),
               Text(
                 'Forgot Password',
-                style: Theme.of(context).textTheme.headline5!.copyWith(
+                style: Theme.of(context).textTheme.headline5.copyWith(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
@@ -36,7 +36,7 @@ class RecoverMailPage extends StatelessWidget {
                 width: 91 * SizeConfig.widthMultiplier,
                 child: Text(
                   'Please enter your emeail to recieve your password and rests information',
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
                       ),

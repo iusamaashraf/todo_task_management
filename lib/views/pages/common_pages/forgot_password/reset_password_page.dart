@@ -7,7 +7,7 @@ import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class ResetPasswordPage extends StatelessWidget {
-  ResetPasswordPage({Key? key}) : super(key: key);
+  ResetPasswordPage({Key key}) : super(key: key);
   final TextEditingController resetController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
@@ -31,7 +31,7 @@ class ResetPasswordPage extends StatelessWidget {
               SizedBox(height: 3 * SizeConfig.heightMultiplier),
               Text(
                 'Reset Password',
-                style: Theme.of(context).textTheme.headline5!.copyWith(
+                style: Theme.of(context).textTheme.headline5.copyWith(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
@@ -40,7 +40,7 @@ class ResetPasswordPage extends StatelessWidget {
                 width: 91 * SizeConfig.widthMultiplier,
                 child: Text(
                   'Reset code was sent to your email id. Please enter the code and create a new password',
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
                       ),

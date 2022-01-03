@@ -3,9 +3,9 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class NewTaskTextField extends StatelessWidget {
   const NewTaskTextField({
-    required this.hintText,
-    required this.controller,
-    Key? key,
+    this.hintText,
+    this.controller,
+    Key key,
   }) : super(key: key);
   final String hintText;
   final TextEditingController controller;

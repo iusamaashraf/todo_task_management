@@ -8,7 +8,7 @@ import 'package:todo_task_management/views/widgets/primary_button.dart';
 import 'components/description_widget.dart';
 
 class NewTaskPage extends StatelessWidget {
-  NewTaskPage({Key? key}) : super(key: key);
+  NewTaskPage({Key key}) : super(key: key);
   final TextEditingController titleController = TextEditingController();
   final TextEditingController dueDate = TextEditingController();
   @override
@@ -22,7 +22,7 @@ class NewTaskPage extends StatelessWidget {
           'New Task',
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headline5
               .copyWith(color: Colors.white),
         ),
         centerTitle: true,
@@ -75,7 +75,7 @@ class NewTaskPage extends StatelessWidget {
                               'Description',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             const SizedBox(height: 10),
@@ -90,7 +90,7 @@ class NewTaskPage extends StatelessWidget {
                               'Add member',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             const SizedBox(height: 10),
@@ -102,7 +102,7 @@ class NewTaskPage extends StatelessWidget {
                               child: Text('Anyone',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .subtitle1!
+                                      .subtitle1
                                       .copyWith(
                                           color: Colors.black,
                                           fontWeight: FontWeight.w600)),

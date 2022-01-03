@@ -3,9 +3,9 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class ChooseColor extends StatelessWidget {
   const ChooseColor({
-    required this.onTap,
-    required this.color,
-    Key? key,
+    this.onTap,
+    this.color,
+    Key key,
   }) : super(key: key);
   final Color color;
   final VoidCallback onTap;

@@ -4,8 +4,8 @@ import 'package:todo_task_management/utils/colors.dart';
 
 class AddTask extends StatelessWidget {
   const AddTask({
-    required this.onTap,
-    Key? key,
+    this.onTap,
+    Key key,
   }) : super(key: key);
 
   final VoidCallback onTap;

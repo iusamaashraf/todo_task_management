@@ -8,7 +8,7 @@ import 'package:todo_task_management/views/widgets/custom_text_field.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class SignInPage extends StatelessWidget {
-  SignInPage({Key? key}) : super(key: key);
+  SignInPage({Key key}) : super(key: key);
 
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -31,14 +31,14 @@ class SignInPage extends StatelessWidget {
             SizedBox(height: 2 * SizeConfig.heightMultiplier),
             Text(
               'Welcome Back!',
-              style: Theme.of(context).textTheme.headline5!.copyWith(
+              style: Theme.of(context).textTheme.headline5.copyWith(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
             ),
             Text(
               'Sign in to continue...',
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
+              style: Theme.of(context).textTheme.subtitle1.copyWith(
                     color: Colors.grey,
                     fontWeight: FontWeight.w400,
                   ),
@@ -65,7 +65,7 @@ class SignInPage extends StatelessWidget {
                   child: Text('Fotgot Password?',
                       style: Theme.of(context)
                           .textTheme
-                          .subtitle2!
+                          .subtitle2
                           .copyWith(color: Colors.black)),
                 )
               ],

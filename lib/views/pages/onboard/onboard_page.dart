@@ -11,7 +11,7 @@ import 'package:todo_task_management/views/pages/common_pages/sign_in/sign_in_pa
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class OnboardPage extends StatelessWidget {
-  OnboardPage({Key? key}) : super(key: key);
+  OnboardPage({Key key}) : super(key: key);
 
   final controller = OnboardController();
   @override
@@ -39,7 +39,7 @@ class OnboardPage extends StatelessWidget {
                           Text(controller.bordingPage[index].title,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline6!
+                                  .headline6
                                   .copyWith(color: Colors.black)),
                           const SizedBox(height: 20),
                           Padding(
@@ -48,7 +48,7 @@ class OnboardPage extends StatelessWidget {
                               controller.bordingPage[index].description,
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                               textAlign: TextAlign.center,
                             ),
@@ -108,7 +108,7 @@ class OnboardPage extends StatelessWidget {
                 child: Text('Login',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .subtitle1
                         .copyWith(color: Colors.white)),
               ),
             ),

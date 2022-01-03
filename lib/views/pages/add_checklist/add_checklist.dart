@@ -8,7 +8,7 @@ import 'package:todo_task_management/views/widgets/choose_color.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class AddChecklist extends StatelessWidget {
-  AddChecklist({Key? key}) : super(key: key);
+  AddChecklist({Key key}) : super(key: key);
 
   final checkBoxController = OnboardController();
   final TextEditingController titleController = TextEditingController();
@@ -23,7 +23,7 @@ class AddChecklist extends StatelessWidget {
           'New Checklist',
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headline5
               .copyWith(color: Colors.white),
         ),
         centerTitle: true,
@@ -70,7 +70,7 @@ class AddChecklist extends StatelessWidget {
                               'Title',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             NewTaskTextField(
@@ -93,7 +93,7 @@ class AddChecklist extends StatelessWidget {
                               'Color',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1!
+                                  .subtitle1
                                   .copyWith(color: Colors.black),
                             ),
                             const SizedBox(height: 5),
@@ -149,9 +149,9 @@ class AddChecklist extends StatelessWidget {
 
 class CheckBoxWidget extends StatelessWidget {
   const CheckBoxWidget({
-    Key? key,
-    required this.checkBoxController,
-    required this.title,
+    Key key,
+    this.checkBoxController,
+    this.title,
   }) : super(key: key);
 
   final OnboardController checkBoxController;
@@ -165,17 +165,15 @@ class CheckBoxWidget extends StatelessWidget {
             return Checkbox(
               value: con.rememberMe.value,
               onChanged: (val) {
-                con.rememberMe.value = val as bool;
+                con.rememberMe.value = val;
               },
             );
           }),
       // SizedBox(width:  * SizeConfig.widthMultiplier),
       Text(
         title,
-        style: Theme.of(context)
-            .textTheme
-            .subtitle2!
-            .copyWith(color: Colors.black),
+        style:
+            Theme.of(context).textTheme.subtitle2.copyWith(color: Colors.black),
       ),
     ]);
   }

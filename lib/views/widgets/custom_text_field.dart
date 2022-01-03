@@ -3,11 +3,11 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class CustomField extends StatelessWidget {
   const CustomField({
-    required this.hintText,
-    required this.title,
-    required this.textinputType,
-    required this.controller,
-    Key? key,
+    this.hintText,
+    this.title,
+    this.textinputType,
+    this.controller,
+    Key key,
   }) : super(key: key);
 
   final String title, hintText;
@@ -23,14 +23,14 @@ class CustomField extends StatelessWidget {
           title,
           style: Theme.of(context)
               .textTheme
-              .headline6!
+              .headline6
               .copyWith(color: Colors.black, fontWeight: FontWeight.w400),
         ),
         TextFormField(
           controller: controller,
           style: Theme.of(context)
               .textTheme
-              .subtitle1!
+              .subtitle1
               .copyWith(color: Colors.black),
           keyboardType: textinputType,
           decoration: InputDecoration(

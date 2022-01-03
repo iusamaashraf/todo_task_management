@@ -5,7 +5,7 @@ import 'package:todo_task_management/utils/images.dart';
 import 'package:todo_task_management/views/pages/onboard/onboard_page.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({Key key}) : super(key: key);
 
   @override
   State<SplashPage> createState() => _SplashPageState();

@@ -3,7 +3,7 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class DescriptionWidget extends StatelessWidget {
   const DescriptionWidget({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

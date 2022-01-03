@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class TextButtonWidget extends StatelessWidget {
   const TextButtonWidget({
-    required this.onTap,
-    required this.title,
+    this.onTap,
+    this.title,
     this.isShowDivider = true,
-    Key? key,
+    Key key,
   }) : super(key: key);
   final String title;
   final VoidCallback onTap;
@@ -20,7 +20,7 @@ class TextButtonWidget extends StatelessWidget {
             title,
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
+                .subtitle1
                 .copyWith(color: Colors.black87, fontWeight: FontWeight.w500),
           ),
         ),

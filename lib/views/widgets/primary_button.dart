@@ -3,13 +3,13 @@ import 'package:todo_task_management/constants/size_config.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
-    required this.text,
-    required this.onTap,
-    required this.bgColor,
+    this.text,
+    this.onTap,
+    this.bgColor,
     this.isShadow = false,
-    required this.textColor,
+    this.textColor,
     this.isExpanded = false,
-    Key? key,
+    Key key,
   }) : super(key: key);
   final VoidCallback onTap;
   final String text;
@@ -44,7 +44,7 @@ class PrimaryButton extends StatelessWidget {
             text,
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
+                .subtitle1
                 .copyWith(color: textColor, fontWeight: FontWeight.bold),
           ),
         ),

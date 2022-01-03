@@ -7,7 +7,7 @@ import 'package:todo_task_management/views/pages/root/root_page.dart';
 import 'package:todo_task_management/views/widgets/primary_button.dart';
 
 class PasswordChangedPage extends StatelessWidget {
-  const PasswordChangedPage({Key? key}) : super(key: key);
+  const PasswordChangedPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class PasswordChangedPage extends StatelessWidget {
             SizedBox(height: 2 * SizeConfig.heightMultiplier),
             Text(
               'Successful!',
-              style: Theme.of(context).textTheme.headline5!.copyWith(
+              style: Theme.of(context).textTheme.headline5.copyWith(
                     color: Colors.black87,
                     fontWeight: FontWeight.bold,
                   ),
@@ -35,7 +35,7 @@ class PasswordChangedPage extends StatelessWidget {
             SizedBox(height: 2 * SizeConfig.heightMultiplier),
             Text(
               'You have successfully changed our password. Please use your new password to login!',
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(
+              style: Theme.of(context).textTheme.subtitle1.copyWith(
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
                   ),

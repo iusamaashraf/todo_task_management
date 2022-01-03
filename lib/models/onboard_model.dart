@@ -6,9 +6,9 @@ class OnboardModel {
   final String description;
 
   OnboardModel({
-    required this.imageAsset,
-    required this.title,
-    required this.description,
+    this.imageAsset,
+    this.title,
+    this.description,
   });
 }
 

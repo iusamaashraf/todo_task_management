@@ -8,7 +8,7 @@ import 'package:todo_task_management/views/pages/root/tabs/today_dart.dart';
 
 // ignore: must_be_immutable
 class MyTaskPage extends StatelessWidget {
-  MyTaskPage({Key? key}) : super(key: key);
+  MyTaskPage({Key key}) : super(key: key);
   List<Widget> pages = const [
     TodayTab(),
     MonthlyTab(),
@@ -56,7 +56,7 @@ class MyTaskPage extends StatelessWidget {
                 },
                 child: Text(
                   name,
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
                       color: Colors.white,
                       fontSize: index == con.selectedIndex.value
                           ? 2 * SizeConfig.textMultiplier
